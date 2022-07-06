@@ -44,13 +44,15 @@ export default function MovieItemMobile({ movie }) {
             <Paragraph ellipsis={{ rows: 6 }}>{movie.moTa}</Paragraph>
           </div>
           <div>
-            <NavLink
-              to={`detail/${movie.maPhim}`}
+            <button
+              onClick={() => {
+                window.location.href = `/detail/${movie.maPhim}`;
+              }}
               className="block rounded text-white w-full h-16 hover:text-white justify-center items-center"
               style={{ backgroundColor: "#fb4225" }}
             >
               <p className="h-full flex justify-center items-center">Mua Vé</p>
-            </NavLink>
+            </button>
           </div>
         </div>
       </div>
