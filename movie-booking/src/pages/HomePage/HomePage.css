@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+  }
+#carousel_homepage .ant-carousel .slick-dots li.slick-active button 
+{
+    background-color: #fb4225;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    border-radius: 50%;
+}
+#carousel_homepage .ant-carousel .slick-dots li button
+{
+    background-color: grey;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    border-radius: 50%;
+}
+#phimDangChieu-header{
+   padding-bottom: 5px;
+   width: max-content;
+   content: "";
+   border-bottom: 2px solid #fb4225 ;
+}
+#cumRap-header{
+    padding-bottom: 5px;
+    width: max-content;
+    content: "";
+    border-bottom: 2px solid #fb4225 ;
+ }
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + div.ant-tabs-tab {
+   margin: 0px;
+   padding: 16px 24px;
+   width: max-content;
+   border-bottom: 1px solid rgb(229, 231, 235);
+
+}
+.ant-tabs-left > .ant-tabs-nav div.ant-tabs-tab {
+    padding: 16px 24px;
+    width: max-content;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+div#cumRap-panel .ant-tabs-nav-list div.ant-tabs-tab {
+    padding: 16px 0px;
+    margin-right: 24px;
+}

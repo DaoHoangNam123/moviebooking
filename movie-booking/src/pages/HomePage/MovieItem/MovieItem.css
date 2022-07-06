@@ -1,0 +1,34 @@
+#trailer-button {
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+#movie-card:hover #trailer-button:hover {
+    opacity: 0.7;
+    background: transparent;
+}
+#movie-card:hover #trailer-button {
+    opacity: 1;
+}
+#movie-card div.ant-card-body {
+    padding: 16px;
+}
+#movie-card:hover #movie-info
+{
+    display: none;
+}
+#movie-card:hover #buyTicket-button {
+    display: inline-block;
+    font-size: 24px;
+}
+#movie-card:hover .ant-card-cover #image-cover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 350px;
+    opacity: 1;
+    background: linear-gradient(to top,#000,transparent 100%);
+    transition: all 0.3s;
+}

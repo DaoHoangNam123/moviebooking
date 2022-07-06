@@ -1,0 +1,17 @@
+.ant-row.ant-form-item {
+    margin-bottom: 10px;
+}
+.ant-row.ant-form-item input.ant-input {
+    border-radius: 5px;
+}
+.ant-row.ant-form-item span.ant-input-password {
+    border-radius: 5px;
+}
+button#login-button {
+    height: 40px;
+    background-color: #fb4225;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}

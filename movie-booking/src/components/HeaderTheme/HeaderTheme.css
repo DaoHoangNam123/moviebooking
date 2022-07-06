@@ -1,0 +1,8 @@
+#header-navBar span:hover {
+   color: #fb4225;
+   transition: all 0.5s;
+   
+}
+#header-navBar span {
+    font-family: 'Roboto', sans-serif;
+}
