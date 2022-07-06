@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "movie-booking",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build - movie-booking",
+			"detail": "react-scripts build"
+		}
+	]
+}
