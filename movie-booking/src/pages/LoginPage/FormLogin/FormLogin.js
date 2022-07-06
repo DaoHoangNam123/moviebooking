@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Input, message } from "antd";
+import { Form, Input, message } from "antd";
 import { userService } from "../../../services/userService";
 import { localStorageService } from "../../../services/localStorageService";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,6 @@ export default function FormLogin() {
   let navigate = useNavigate();
   let dispatch = useDispatch();
   const onFinish = (values) => {
-    console.log("Success:", values);
     userService
       .postDangNhap(values)
       .then((res) => {
@@ -19,10 +18,8 @@ export default function FormLogin() {
         setInterval(() => {
           navigate("/");
         }, 2000);
-        console.log(res.data);
       })
       .catch((err) => {
-        console.log(err);
         message.error(err.response.data.content, 5);
       });
   };

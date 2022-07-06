@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Progress, Rate, Tabs, Typography } from "antd";
+import { Rate, Tabs, Typography } from "antd";
 import { StarFilled } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
 import { movieService } from "../../services/movieService";
@@ -29,8 +29,6 @@ export default function DetailPage() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
-  useEffect(() => {
     movieService
       .getMovieTime(id)
       .then((res) => {
