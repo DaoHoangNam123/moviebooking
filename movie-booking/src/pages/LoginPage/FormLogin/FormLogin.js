@@ -13,14 +13,14 @@ export default function FormLogin() {
       .postDangNhap(values)
       .then((res) => {
         localStorageService.setUserInfor(res.data.content);
-        message.success("Login success");
+        //message.success("Login success");
         dispatch(setUserInfoAction(res.data.content));
         setInterval(() => {
           navigate("/");
-        }, 2000);
+        }, 1000);
       })
       .catch((err) => {
-        message.error(err.response.data.content, 5);
+        //  message.error(err.response.data.content, 5);
       });
   };
 
@@ -43,35 +43,16 @@ export default function FormLogin() {
       autoComplete="off"
     >
       <h1 className="text-4xl font-light mb-0">Login</h1>
-      <Form.Item
-        label="Tài khoản"
-        name="taiKhoan"
-        className="mb-0"
-        rules={[
-          {
-            required: true,
-            message: "Please input your username!",
-          },
-        ]}
-      >
+      <Form.Item label="Tài khoản" name="taiKhoan" className="mb-0" required>
         <Input />
       </Form.Item>
 
-      <Form.Item
-        label="Mật khẩu"
-        name="matKhau"
-        rules={[
-          {
-            required: true,
-            message: "Please input your password!",
-          },
-        ]}
-      >
+      <Form.Item label="Mật khẩu" name="matKhau" required>
         <Input.Password />
       </Form.Item>
 
       <div className="text-center mt-5">
-        <button id="login-button" className="w-full mx-auto" htmlType="submit">
+        <button id="login-button" className="w-full mx-auto">
           Login
         </button>
         <div className="flex items-center justify-center mt-2">

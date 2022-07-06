@@ -8,7 +8,7 @@ const MovieCarousel = ({ chunkList }) => {
           <div className="h-max w-full py-10 px-2">
             <div className="grid grid-cols-4 gap-10">
               {movie.map((item) => {
-                return <MovieItem movie={item} />;
+                return <MovieItem movie={item} index={index} />;
               })}
             </div>
           </div>

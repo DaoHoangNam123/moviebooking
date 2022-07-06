@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { GET_TRAILER_ID } from "../../redux/constant/homePageContants";
 import MovieTrailer from "../HomePage/MovieItem/MovieTrailer";
 import { useWindowSize } from "../../Hook/useWindowSize";
+import DetailPageMobile from "./DetailPageMobile";
 
 export default function DetailPage() {
   const { TabPane } = Tabs;
@@ -39,37 +40,10 @@ export default function DetailPage() {
       });
   }, []);
   let renderContent = () => {
-    if (windowSize.width < 500) {
-      return movieTime.heThongRapChieu?.map((heThongRap, index) => {
-        return (
-          <TabPane
-            tab={<img src={heThongRap.logo} className="w-10 h-10" />}
-            key={index}
-          >
-            {heThongRap.cumRapChieu.map((cumRap, index) => {
-              return (
-                <div className="mx-4 mt-4">
-                  <div className="whitespace-normal text-left ">
-                    <Text type="success">{cumRap.tenCumRap}</Text>
-                    <Paragraph type="secondary">{cumRap.diaChi}</Paragraph>
-                  </div>
-                  <div
-                    className="border-b-2"
-                    style={{ minHeight: "100px", overflowY: "scroll" }}
-                  >
-                    <DetailMovieTab
-                      key={index}
-                      timeList={cumRap.lichChieuPhim}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </TabPane>
-        );
-      });
-    } else {
-      return movieTime.heThongRapChieu?.map((heThongRap, index) => {
+    return movieTime.heThongRapChieu?.map((heThongRap, index) => {
+      if (windowSize.width < 500) {
+        return <DetailPageMobile heThongRap={heThongRap} />;
+      } else {
         return (
           <TabPane
             tab={<img src={heThongRap.logo} className="w-10 h-10" />}
@@ -109,8 +83,8 @@ export default function DetailPage() {
             </Tabs>
           </TabPane>
         );
-      });
-    }
+      }
+    });
   };
   return (
     <div className="xl:container xl:mx-auto mx-10 py-10 space-y-10">
