@@ -1,14 +1,12 @@
-import { Card, Typography } from "antd";
+import { Typography } from "antd";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import movieitem from "./MovieItem.css";
 import moment from "moment";
 import { GET_TRAILER_ID } from "../../../redux/constant/homePageContants";
-import Title from "antd/lib/skeleton/Title";
 
 export default function MovieItemMobile({ movie }) {
-  const { Meta } = Card;
-  const { Paragraph, Text } = Typography;
+  const { Paragraph } = Typography;
   const dispatch = useDispatch();
   return (
     <div className="space-x-10 space-y-10 ">

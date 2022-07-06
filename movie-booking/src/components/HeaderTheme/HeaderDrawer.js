@@ -1,8 +1,7 @@
-import { Button, Drawer } from "antd";
+import { Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import UserNav from "./UserNav";
 import UserNavDrawer from "./UserNavDrawer";
 const HeaderDrawer = () => {
   const [visible, setVisible] = useState(false);

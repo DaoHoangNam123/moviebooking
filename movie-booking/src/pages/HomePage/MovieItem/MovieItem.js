@@ -1,6 +1,5 @@
 import { Card, Typography } from "antd";
 import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
 import movieitem from "./MovieItem.css";
 import { GET_TRAILER_ID } from "../../../redux/constant/homePageContants";
 
@@ -8,6 +7,7 @@ export default function MovieItem({ movie }) {
   const { Meta } = Card;
   const { Paragraph, Text } = Typography;
   const dispatch = useDispatch();
+
   return (
     <Card
       hoverable
@@ -15,7 +15,6 @@ export default function MovieItem({ movie }) {
         width: "100%",
         height: "100%",
       }}
-      className="overflow-hidden"
       cover={
         <div style={{ height: "350px", minHeight: "300px", width: "100%" }}>
           <img alt="example" src={movie.hinhAnh} className="w-full h-full" />
@@ -57,14 +56,16 @@ export default function MovieItem({ movie }) {
         id="movie-info"
       />
       <div className="mt-4">
-        <NavLink
+        <button
           id="buyTicket-button"
-          to={`detail/${movie.maPhim}`}
+          onClick={() => {
+            window.location.href = `/detail/${movie.maPhim}`;
+          }}
           className="hidden rounded text-white w-full h-16 hover:text-white justify-center items-center"
           style={{ backgroundColor: "#fb4225" }}
         >
           <p className="h-full flex justify-center items-center">Mua Vé</p>
-        </NavLink>
+        </button>
       </div>
     </Card>
   );
