@@ -43,11 +43,30 @@ export default function FormLogin() {
       autoComplete="off"
     >
       <h1 className="text-4xl font-light mb-0">Login</h1>
-      <Form.Item label="Tài khoản" name="taiKhoan" className="mb-0" required>
+      <Form.Item
+        label="Tài khoản"
+        name="taiKhoan"
+        className="mb-0"
+        rules={[
+          {
+            required: true,
+            message: "Please input your username!",
+          },
+        ]}
+      >
         <Input />
       </Form.Item>
 
-      <Form.Item label="Mật khẩu" name="matKhau" required>
+      <Form.Item
+        label="Mật khẩu"
+        name="matKhau"
+        rules={[
+          {
+            required: true,
+            message: "Please input your password!",
+          },
+        ]}
+      >
         <Input.Password />
       </Form.Item>
 
