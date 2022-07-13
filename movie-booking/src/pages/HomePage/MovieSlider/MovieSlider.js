@@ -1,14 +1,14 @@
 import { Carousel } from "antd";
 import { useDispatch } from "react-redux";
 import { GET_TRAILER_ID } from "../../../redux/constant/homePageContants";
-import movieslider from "./MovieSlider.css";
+import "./../../../assets/css/MovieSlider.css";
 const MovieSlider = ({ bannerList }) => {
   let dispatch = useDispatch();
   return (
     <Carousel autoplay>
       {bannerList.map((movie, index) => {
         return (
-          <div id="slider-banner">
+          <div id="slider-banner" key={index}>
             <img
               src={movie.hinhAnh}
               alt="Banner"

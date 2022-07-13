@@ -13,6 +13,7 @@ export default function MovieList({ movieTimeList }) {
               backgroundColor: "rgba(246, 246, 246, 0.5)",
               border: "1px solid #e4e4e4",
             }}
+            key={index}
           >
             <div className=" hover:scale-110">
               <span className="font-medium" style={{ color: "#0e8f3e" }}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import FormRegister from "./FormRegister/FormRegister";
-import registerpage from "./RegisterPage.css";
+import "../../assets/css/RegisterPage.css";
 export default function RegisterPage() {
   return (
     <div className="w-screen h-screen">
@@ -11,6 +11,7 @@ export default function RegisterPage() {
             <img
               className="w-60 h-20 mx-5 py-5"
               src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
+              alt="logo"
             />
           </span>
         </NavLink>

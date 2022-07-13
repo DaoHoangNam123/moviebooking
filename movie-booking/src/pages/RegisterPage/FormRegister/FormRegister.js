@@ -125,7 +125,6 @@ export default function FormRegister() {
           <button
             id="login-button"
             className="w-full mx-auto"
-            htmlType="submit"
             onClick={() => {
               registerUser(validUser);
             }}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import swal from "sweetalert";
-import { CONFIRM_BOOK_TICKET } from "./../../redux/constant/constant";
+import { CONFIRM_BOOK_TICKET } from "../../redux/constant/bookTicketConstant";
 import { localStorageService } from "../../services/localStorageService";
 import { useNavigate } from "react-router-dom";
 import { movieService } from "../../services/movieService";

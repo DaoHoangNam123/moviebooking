@@ -1,6 +1,6 @@
 import { Card, Typography } from "antd";
 import { useDispatch } from "react-redux";
-import movieitem from "./MovieItem.css";
+import "./../../../assets/css/MovieItem.css";
 import { GET_TRAILER_ID } from "../../../redux/constant/homePageContants";
 
 export default function MovieItem({ movie }) {

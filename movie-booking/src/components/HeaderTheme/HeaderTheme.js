@@ -1,11 +1,10 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import UserNav from "./UserNav";
-import headertheme from "./HeaderTheme.css";
+import "../../assets/css/HeaderTheme.css";
 import { useWindowSize } from "../../Hook/useWindowSize";
 import HeaderDrawer from "./HeaderDrawer";
 export default function HeaderTheme() {
-  let navigate = useNavigate();
   let windowSize = useWindowSize();
   let renderHeader = () => {
     if (windowSize.width > 992) {
@@ -16,22 +15,15 @@ export default function HeaderTheme() {
               <img
                 className="w-full h-full"
                 src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
+                alt="logo"
               />
             </span>
           </NavLink>
           <div className="space-x-5 text-sm font-bold" id="header-navBar">
-            <a
-              onClick={() => {
-                navigate("/");
-              }}
-            >
+            <a href="/">
               <span className="text-black">Phim đang chiếu</span>
             </a>
-            <a
-              onClick={() => {
-                navigate("/");
-              }}
-            >
+            <a href="/">
               <span className="text-black">Cụm rạp</span>
             </a>
           </div>

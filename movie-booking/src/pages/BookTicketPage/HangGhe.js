@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { CHOOSE_SEAT } from "./../../redux/constant/constant";
+import { CHOOSE_SEAT } from "./../../redux/constant/bookTicketConstant";
 
 class HangGhe extends Component {
   render() {
@@ -17,7 +17,7 @@ class HangGhe extends Component {
                         ? ghe.status
                         : ghe.daDat
                         ? "gheDaDat"
-                        : ghe.loaiGhe == "Thuong"
+                        : ghe.loaiGhe === "Thuong"
                         ? "gheThuong"
                         : "gheVip"
                     }

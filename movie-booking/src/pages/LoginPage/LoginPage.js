@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import FormLogin from "./FormLogin/FormLogin";
-import loginpage from "./LoginPage.css";
+import "../../assets/css/LoginPage.css";
 export default function LoginPage() {
   return (
     <div className="w-screen h-screen">
@@ -11,6 +11,7 @@ export default function LoginPage() {
             <img
               className="w-60 h-20 mx-5 py-5"
               src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
+              alt="logo"
             />
           </span>
         </NavLink>

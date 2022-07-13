@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { movieService } from "../../services/movieService";
 import _ from "lodash";
-import homepage from "./HomePage.css";
+import "./../../assets/css/HomePage.css";
 import MovieTrailer from "./MovieItem/MovieTrailer";
 import MovieSlider from "./MovieSlider/MovieSlider";
 import { useDispatch } from "react-redux";

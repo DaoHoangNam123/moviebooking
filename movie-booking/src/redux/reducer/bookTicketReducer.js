@@ -2,7 +2,7 @@ import {
   CONFIRM_BOOK_TICKET,
   CHOOSE_SEAT,
   SET_TICKET_DATA,
-} from "./../constant/constant";
+} from "../constant/bookTicketConstant";
 let initialState = {
   seatData: {},
   bookedTicket: [],

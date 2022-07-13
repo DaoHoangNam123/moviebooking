@@ -1,7 +1,6 @@
 import { Typography } from "antd";
 import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
-import movieitem from "./MovieItem.css";
+import "../../../assets/css/MovieItem.css";
 import moment from "moment";
 import { GET_TRAILER_ID } from "../../../redux/constant/homePageContants";
 
@@ -12,7 +11,11 @@ export default function MovieItemMobile({ movie }) {
     <div className="space-x-10 space-y-10 ">
       <div className="grid grid-cols-2 space-x-5 items-start justify-center py-3">
         <div id="movie-image">
-          <img src={movie.hinhAnh} className="w-full h-full"></img>
+          <img
+            src={movie.hinhAnh}
+            className="w-full h-full"
+            alt="hinh anh phim"
+          ></img>
           <button>
             <img
               src="/playbutton.png"

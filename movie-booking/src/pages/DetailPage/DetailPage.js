@@ -4,7 +4,7 @@ import { StarFilled } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
 import { movieService } from "../../services/movieService";
 import moment from "moment";
-import detailpage from "./DetailPage.css";
+import "./../../assets/css/DetailPage.css";
 import DetailMovieTab from "./DetailMovieTab";
 import { useDispatch } from "react-redux";
 import { GET_TRAILER_ID } from "../../redux/constant/homePageContants";
@@ -43,7 +43,9 @@ export default function DetailPage() {
       if (windowSize.width < 500) {
         return (
           <TabPane
-            tab={<img src={heThongRap.logo} className="w-10 h-10" />}
+            tab={
+              <img src={heThongRap.logo} className="w-10 h-10" alt="logo rap" />
+            }
             key={index}
           >
             {heThongRap.cumRapChieu.map((cumRap, index) => {
@@ -70,7 +72,9 @@ export default function DetailPage() {
       } else {
         return (
           <TabPane
-            tab={<img src={heThongRap.logo} className="w-10 h-10" />}
+            tab={
+              <img src={heThongRap.logo} className="w-10 h-10" alt="logo rap" />
+            }
             key={index}
           >
             <Tabs
@@ -114,7 +118,11 @@ export default function DetailPage() {
     <div className="xl:container xl:mx-auto mx-10 py-10 space-y-10">
       <div className="grid md:grid-cols-5 sm:space-x-10 items-start justify-center">
         <div id="movie-image">
-          <img src={movie.hinhAnh} className="w-full h-full"></img>
+          <img
+            src={movie.hinhAnh}
+            className="w-full h-full"
+            alt="hinh anh phim"
+          ></img>
           <button>
             <img
               src="/playbutton.png"

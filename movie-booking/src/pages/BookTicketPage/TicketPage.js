@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { SET_TICKET_DATA } from "../../redux/constant/constant";
+import { SET_TICKET_DATA } from "../../redux/constant/bookTicketConstant";
 import {
   SET_SPINNER_END,
   SET_SPINNER_STARTED,
 } from "../../redux/constant/spinnerConstant";
 import { movieService } from "../../services/movieService";
-import "./css/BookingTicket.css";
+import "../../assets/css/BookingTicket.css";
 import HangGhe from "./HangGhe";
 import ThongTinVe from "./ThongTinVe";
 export default function TicketPage() {
